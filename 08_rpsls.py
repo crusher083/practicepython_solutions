@@ -24,14 +24,14 @@ def rpsls_game(p1_move, p2_move):
     playing = True
     while playing:
         if (p1_move - p2_move) % 5 < 3:
-            win = (p1_move**2 + 10) // (p2_move - 0.5)
+            win = int((p1_move**2 + 10) // (p2_move - 0.5))
             print(f'{values[p1_move]} {win_options[win]} {values[p2_move]}!\
                   \n{player1} wins!')
             playing = False
         elif p1_move == p2_move:
             print('It is a tie!')
         else:
-            win = ((p2_move**2 + 10) // (p1_move - 0.5))
+            win = int((p2_move**2 + 10) // (p1_move - 0.5))
             print(f'{values[p2_move]} {win_options[win]} {values[p1_move]}\
                   \n{player2} wins!')
             playing = False
@@ -56,9 +56,9 @@ def replay():
 
 
 values = {0: 'Rock', 1: 'Spock', 2: 'Paper', 3: 'Lizard', 4: 'Scissors'}
-win_options = {-28.0: 'wraps', -22.0: 'evaporates', 2.0: 'crushes',
-               3.0: 'smashes', 4.0: 'crush', 10.0: 'decapitate', 12.0: 'eats',
-               17.0: 'cuts', 28.0: 'disproves', 38.0: 'poisons'}
+win_options = {-28: 'wraps', -22: 'evaporates', 2: 'crushes',
+               3: 'smashes', 4: 'crush', 10: 'decapitate', 12: 'eats',
+               17: 'cut', 28: 'disproves', 38: 'poisons'}
 
 
 if __name__ == '__main__':
