@@ -1,4 +1,6 @@
 # https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html
+
+
 def enter_names():
     player1 = input(f'Player1, please enter your name: ')
     player2 = input(f'Player2, please enter your name: ')
